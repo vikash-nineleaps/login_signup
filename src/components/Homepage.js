@@ -40,7 +40,7 @@ export default function Homepage() {
               height="24"
               className="d-inline-block align-text-top"
             />
-            NEWSium
+            Quotum
           </a>
         </div>
       </nav>
@@ -62,7 +62,7 @@ export default function Homepage() {
                             style={{ width: 185 }}
                             alt="logo"
                           />
-                          <h4 class="mt-1 mb-5 pb-1">We Are The NEWSium</h4>
+                          <h4 class="mt-1 mb-5 pb-1">We Are The Quotum</h4>
                           <button
                             class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                             type="button"

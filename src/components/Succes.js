@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
-export default function Error() {
+export default function Succes() {
   const navigate = useNavigate();
 
     function onClicking(){
@@ -47,7 +47,7 @@ export default function Error() {
                             type="button"
                             onClick={onClicking}
                           >
-Try again                          </button>
+Click here to login                       </button>
                         </div>
                       </div>
                     </div>
@@ -67,7 +67,7 @@ Try again                          </button>
                           justifyContent: "center",
                         }}
                       >
-                        <p>Enter Correct Credential</p>
+                        <p>Succesfully Signed Up</p>
                       </div>
                     </div>
                   </div>

@@ -2,14 +2,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 export default function Signup(){
+  const navigate=useNavigate()
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
 
   const signUp =(e)=> {
     e.preventDefault();
     createUserWithEmailAndPassword(auth,email,password).then((useCredential)=>{
-      console.log(useCredential);
+      navigate('/Succes');
     }).catch((error)=>{
       console.log(error)
     })

@@ -22,7 +22,7 @@ export default function Landingpage() {
               height="24"
               className="d-inline-block align-text-top"
             />
-            NEWSium
+            Quotum
           </a>
         </div>
       </nav>
@@ -44,7 +44,7 @@ export default function Landingpage() {
                             style={{ width: 185 }}
                             alt="logo"
                           />
-                          <h4 class="mt-1 mb-5 pb-1">We Are The NEWSium</h4>
+                          <h4 class="mt-1 mb-5 pb-1">We Are The Quotum</h4>
                         </div>
                         <form>
                           <div class="text-center pt-1 mb-5 pb-1">
