@@ -1,17 +1,27 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import Homepage from "./Homepage";
 import { useNavigate } from "react-router-dom";
-
+import { auth } from "../firebase";
+import Error from "./Error";
+import { signInWithEmailAndPassword } from "firebase/auth";
 export default function Login() {
   const [loggedIn, setloggedIn] = useState(false);
   const navigate = useNavigate();
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
 
-  function onClicking() {
+
+  const onClicking=(e)=> {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth,email,password).then((userCredential)=> {
+      navigate("/Homepage");
+    }).catch((error)=>{
+      navigate("/Error")
+    })
     setloggedIn(true);
   }
   if (loggedIn) {
-    navigate("/Homepage");
+    console.log("welcome")
   } else {
     return (
       <>
@@ -29,6 +39,8 @@ export default function Login() {
                   id="form2Example11"
                   class="form-control"
                   placeholder="Phone number or email address"
+                  value={email}
+                  onChange={(e)=> setEmail(e.target.value)}
                 />
               </div>
 
@@ -38,6 +50,9 @@ export default function Login() {
                   id="form2Example22"
                   class="form-control"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e)=> setPassword(e.target.value)}
+
                 />
               </div>
 
